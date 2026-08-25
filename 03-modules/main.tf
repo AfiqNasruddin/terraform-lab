@@ -8,8 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  access_key                  = "test"
-  secret_key                  = "test"
   region                      = "ap-southeast-1"
   skip_credentials_validation = true
   skip_metadata_api_check     = true
@@ -27,7 +25,7 @@ module "demo_bucket" {
 
   tags = {
     Environment = "learning"
-    Owner       = "afiq"
+    Owner       = "jack"
   }
 }
 
@@ -38,7 +36,7 @@ module "demo2_bucket" {
 
   tags = {
     Environment = "learning"
-    Owner       = "afiq"
+    Owner       = "jack"
     Purpose     = "second-bucket"
   }
 }
@@ -49,7 +47,7 @@ module "website_bucket" {
 
   tags = {
     Environment = "learning"
-    Owner       = "afiq"
+    Owner       = "jack"
     Purpose     = "static-website"
   }
 }
